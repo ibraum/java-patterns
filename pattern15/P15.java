@@ -1,25 +1,24 @@
-public class P13 {
+public class P15 {
     public static void main(String[] args) {
-        int x = 9;
-        int z = 1;
-        int n = 5;
-        for (int i = 1; i <= n; i++) {
-            int y = 0;
+        int n =5;
+        int even = 1;
+        int odd = 9;
+        for (int i = n; i >= 1; i--) {
+            int y = i;
             for (int j = 1; j <= n; j++) {
                 if (j % 2 == 0) {
-                    y += x;
+                    y += even;
                     System.out.print(y + " ");
                 } else if (j == 1) {
-                    y = i;
                     System.out.print(y + " ");
                 } else {
-                    y += z;
+                    y += odd;
                     System.out.print(y + " ");
                 }
             }
-            x -= 2;
-            z += 2;
-            System.out.println("");
+            System.out.println();
+            even += 2;
+            odd -= 2;
         }
     }
 }
